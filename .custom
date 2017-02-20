@@ -1,0 +1,6 @@
+set hls
+set is
+vnoremap // y/<C-R>"<CR>
+map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
