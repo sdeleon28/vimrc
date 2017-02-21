@@ -1,0 +1,10 @@
+set hls
+set is
+vnoremap // y/<C-R>"<CR>
+let NERDTreeShowHidden=1
+set swapfile
+set dir=~/tmp/vimswap
+
+" Map NERDTree
+map <C-b> :NERDTreeToggle<CR>
+
