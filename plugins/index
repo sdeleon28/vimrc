@@ -37,3 +37,6 @@ source ~/vim/vimrc/plugins/syntastic
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
 
+" Mappings por next/previous commands
+Plugin 'tpope/vim-unimpaired'
+
