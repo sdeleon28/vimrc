@@ -1,5 +1,7 @@
 cd ~/vim/
-git clone https://github.com/ryanoasis/nerd-fonts
+mkdir nerd-fonts
 cd nerd-fonts
-./install.sh
+svn checkout https://github.com/ryanoasis/nerd-fonts/trunk/patched-fonts/Hack
+wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/install.sh
+./install.sh Hack
 

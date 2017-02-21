@@ -1,0 +1,39 @@
+" Sidebar
+Plugin 'scrooloose/nerdtree'
+
+" Shows git status for files
+"Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" Project-wide search and replace features
+Plugin 'mileszs/ack.vim'
+
+" Shows git status in each line
+Plugin 'airblade/vim-gitgutter'
+
+" Deals with plurals
+Plugin 'tpope/vim-abolish'
+
+" Project-wide, fuzzy filename search
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Allows for Sublime-like multiple cursors
+Plugin 'terryma/vim-multiple-cursors'
+
+" Deals with surroundings
+Plugin 'tpope/vim-surround'
+
+" Allows repetition of non-built-in commands
+Plugin 'tpope/vim-repeat'
+
+" Adds nice icons to NERDTree
+Plugin 'ryanoasis/vim-devicons'
+
+" React-related plugins and tools
+source ~/vim/vimrc/plugins/react
+
+" Linting
+source ~/vim/vimrc/plugins/syntastic
+
+" Git wrapper
+Plugin 'tpope/vim-fugitive'
+
