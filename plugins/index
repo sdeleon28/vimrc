@@ -1,8 +1,5 @@
-" Sidebar
-Plugin 'scrooloose/nerdtree'
-
-" Shows git status for files
-"Plugin 'Xuyuanp/nerdtree-git-plugin'
+" NERDTree sidebar
+source ~/vim/vimrc/plugins/nerdtree
 
 " Project-wide search and replace features
 Plugin 'mileszs/ack.vim'
@@ -14,7 +11,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-abolish'
 
 " Project-wide, fuzzy filename search
-Plugin 'ctrlpvim/ctrlp.vim'
+source ~/vim/vimrc/plugins/ctrlp
 
 " Allows for Sublime-like multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
