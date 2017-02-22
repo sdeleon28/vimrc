@@ -1,5 +1,6 @@
 function! NumberToggle()
-  if &nu == 1 && &rnu == 0
+  if &rnu == 0
+    set nu
     set rnu
   else
     set nornu
@@ -8,6 +9,7 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-l> :call NumberToggle()<cr>
-" Use relative numbers by default
+" Use relative numbers by default and always include current line number
 set rnu
+set nu
 

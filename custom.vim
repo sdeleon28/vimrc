@@ -15,3 +15,8 @@ set dir=~/tmp
 " This enables :compl-filename to give me proper relative filenames.
 set autochdir
 
+" Use 2 spaces for indentation
+set ts=2
+set et
+set sw=2
+

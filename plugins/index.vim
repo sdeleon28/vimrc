@@ -37,3 +37,6 @@ Plugin 'tpope/vim-fugitive'
 " Mappings por next/previous commands
 Plugin 'tpope/vim-unimpaired'
 
+" Autocomplete like a boss
+Plugin 'Valloric/YouCompleteMe'
+
