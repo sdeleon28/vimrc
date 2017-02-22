@@ -1,4 +1,5 @@
-source ~/vim/vimrc/plugins/plugins_boilerplate
-source ~/vim/vimrc/template
-source ~/vim/vimrc/custom
+source ~/vim/vimrc/plugins/plugins_boilerplate.vim
+source ~/vim/vimrc/template.vim
+source ~/vim/vimrc/custom.vim
+source ~/vim/vimrc/linenumbers.vim
 

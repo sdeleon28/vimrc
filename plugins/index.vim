@@ -1,5 +1,5 @@
 " NERDTree sidebar
-source ~/vim/vimrc/plugins/nerdtree
+source ~/vim/vimrc/plugins/nerdtree.vim
 
 " Project-wide search and replace features
 Plugin 'mileszs/ack.vim'
@@ -11,7 +11,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-abolish'
 
 " Project-wide, fuzzy filename search
-source ~/vim/vimrc/plugins/ctrlp
+source ~/vim/vimrc/plugins/ctrlp.vim
 
 " Allows for Sublime-like multiple cursors
 Plugin 'terryma/vim-multiple-cursors'
@@ -26,10 +26,10 @@ Plugin 'tpope/vim-repeat'
 Plugin 'ryanoasis/vim-devicons'
 
 " React-related plugins and tools
-source ~/vim/vimrc/plugins/react
+source ~/vim/vimrc/plugins/react.vim
 
 " Linting
-source ~/vim/vimrc/plugins/syntastic
+source ~/vim/vimrc/plugins/syntastic.vim
 
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
