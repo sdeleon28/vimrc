@@ -40,3 +40,9 @@ Plugin 'tpope/vim-unimpaired'
 " Autocomplete like a boss
 Plugin 'Valloric/YouCompleteMe'
 
+" Comment stuff out
+Plugin 'tpope/vim-commentary'
+
+" Replace stuff with contents from registers
+Plugin 'vim-scripts/ReplaceWithRegister'
+
