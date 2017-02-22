@@ -31,6 +31,9 @@ source ~/vim/vimrc/plugins/react.vim
 " Linting
 source ~/vim/vimrc/plugins/syntastic.vim
 
+" Custom text-object plugins
+source ~/vim/vimrc/plugins/textobjects.vim
+
 " Git wrapper
 Plugin 'tpope/vim-fugitive'
 
@@ -45,4 +48,16 @@ Plugin 'tpope/vim-commentary'
 
 " Replace stuff with contents from registers
 Plugin 'vim-scripts/ReplaceWithRegister'
+
+" Make titles pretty
+Plugin 'christoomey/vim-titlecase'
+
+" Sort stuff using motions
+Plugin 'christoomey/vim-sort-motion'
+
+" Copy stuff to the system clipboard
+Plugin 'christoomey/vim-system-copy'
+
+" Python mode!
+Plugin 'python-mode/python-mode'
 
