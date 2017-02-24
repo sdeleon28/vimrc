@@ -20,3 +20,10 @@ set sw=2
 " Enable autoindent
 set autoindent
 
+" allow the . to execute once for each line of a visual selection
+vnoremap . :normal .<CR>
+
+" Configure colors
+set t_Co=256
+set term=xterm-256color
+
