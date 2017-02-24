@@ -67,6 +67,9 @@ source ~/vim/vimrc/plugins/argumentative.vim
 " Swift support
 Plugin 'toyamarinyon/vim-swift'
 
-" Make the status line pretty
-source ~/vim/vimrc/plugins/airline.vim
+" Support colorschemes
+Plugin 'godlygeek/csapprox'
+
+" Configure theme
+source ~/vim/vimrc/plugins/theme.vim
 
