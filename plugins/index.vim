@@ -61,3 +61,12 @@ Plugin 'christoomey/vim-system-copy'
 " Python mode!
 Plugin 'python-mode/python-mode'
 
+" Manipulate arguments
+source ~/vim/vimrc/plugins/argumentative.vim
+
+" Swift support
+Plugin 'toyamarinyon/vim-swift'
+
+" Make the status line pretty
+source ~/vim/vimrc/plugins/airline.vim
+
