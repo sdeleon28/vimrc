@@ -65,7 +65,7 @@ Plugin 'python-mode/python-mode'
 source ~/vim/vimrc/plugins/argumentative.vim
 
 " Swift support
-Plugin 'toyamarinyon/vim-swift'
+source ~/vim/vimrc/plugins/swift.vim
 
 " Support colorschemes
 Plugin 'godlygeek/csapprox'
