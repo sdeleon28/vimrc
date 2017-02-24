@@ -1,3 +1,6 @@
+" Set leader key
+let mapleader = ","
+
 " Highlight search matches
 set hls
 
