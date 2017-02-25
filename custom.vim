@@ -30,3 +30,12 @@ vnoremap . :normal .<CR>
 set t_Co=256
 set term=xterm-256color
 
+" Sources the current vimscript
+nnoremap <leader>sop :source %<cr>
+
+" Set Chrome as the default brower
+let g:netrw_browsex_viewer='google-chrome'
+
+" Open image in gwenview
+nnoremap <leader>i :!gwenview <cfile><cr><cr>
+
