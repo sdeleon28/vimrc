@@ -73,3 +73,6 @@ Plugin 'godlygeek/csapprox'
 " Configure theme
 source ~/vim/vimrc/plugins/theme.vim
 
+" Emmet
+Plugin 'mattn/emmet-vim'
+
