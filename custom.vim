@@ -22,6 +22,7 @@ set sw=2
 
 " Enable autoindent
 set autoindent
+set smartindent
 
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
@@ -38,4 +39,7 @@ let g:netrw_browsex_viewer='google-chrome'
 
 " Open image in gwenview
 nnoremap <leader>i :!gwenview <cfile><cr><cr>
+
+" Swaps paste mode
+set pastetoggle=<F3>
 
