@@ -58,6 +58,9 @@ Plugin 'python-mode/python-mode'
 " Manipulate arguments
 source ~/vim/vimrc/plugins/argumentative.vim
 
+" Swift support
+source ~/vim/vimrc/plugins/swift.vim
+
 " Support colorschemes
 Plugin 'godlygeek/csapprox'
 
