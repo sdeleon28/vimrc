@@ -13,9 +13,6 @@ Plugin 'tpope/vim-abolish'
 " Project-wide, fuzzy filename search
 source ~/vim/vimrc/plugins/ctrlp.vim
 
-" Allows for Sublime-like multiple cursors
-Plugin 'terryma/vim-multiple-cursors'
-
 " Deals with surroundings
 Plugin 'tpope/vim-surround'
 
@@ -54,9 +51,6 @@ Plugin 'christoomey/vim-titlecase'
 
 " Sort stuff using motions
 Plugin 'christoomey/vim-sort-motion'
-
-" Copy stuff to the system clipboard
-Plugin 'christoomey/vim-system-copy'
 
 " Python mode!
 Plugin 'python-mode/python-mode'
