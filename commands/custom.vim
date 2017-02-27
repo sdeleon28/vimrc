@@ -60,6 +60,10 @@ function! MapAction(algorithm, key)
   exe 'nmap '.a:key.a:key[strlen(a:key)-1].' <Plug>actionsLine'.a:algorithm
 endfunction
 
+"===============================================================================
+"BEGIN Custom commands
+"===============================================================================
+
 function! s:ToArray(str)
   let s:start = line("'[")
   let s:lines_count = len(split(a:str, '\n'))
@@ -78,5 +82,31 @@ function! s:ToArray(str)
   endwhile
   exe "normal! " . (s:start) . "gg"
 endfunction
-call MapAction('ToArray', '<leader>ss')
+call MapAction('ToArray', '<Leader>ss')
+
+function! ImportCurrentSymbol()
+  " Yank the current word into @a and go to the beginning of the file
+  exe "normal! \"aywgg"
+  " Type 'import '
+  exe "normal! Oimport \<Esc>"
+  " Paste the word you previously yanked
+  exe "normal! \"ap"
+  " Type the rest of the import statement
+  exe "normal! a from '';\<Esc>"
+  " Put the cursor inside the quotes
+  exe "normal! h"
+endfunction
+" Run the function and go into insert mode
+" (for some reason, putting the "i" in the normal! command doesn't work
+nnoremap <Leader>i :call ImportCurrentSymbol()<CR>i
+
+function! s:CopyToSystemClipboard(str)
+  let @+ = a:str
+endfunction
+call MapAction('CopyToSystemClipboard', '<Leader>kc')
+
+function! PasteFromSystemClipboard()
+  exe "normal! \"+p"
+endfunction
+nnoremap <Leader>kp :call PasteFromSystemClipboard()<CR>i
 
