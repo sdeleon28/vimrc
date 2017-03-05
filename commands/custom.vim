@@ -76,13 +76,49 @@ function! s:ToArray(str)
   " Wrap the item in qoutes and go to the next one
   let s:i = 0
   while s:i <= s:lines_count - 1
-    echom s:i
     exe "normal! I\<Tab>'\<Esc>A',\<Esc>j"
     let s:i += 1
   endwhile
   exe "normal! " . (s:start) . "gg"
 endfunction
 call MapAction('ToArray', '<Leader>ss')
+
+function! Trim(str)
+  let s:result = substitute(a:str, '\s\+$', '', 'g')
+  return substitute(s:result, '^\s\+', '', 'g')
+endfunction
+
+function! s:ArrayToOneLiner(str)
+  let s:start = line("'[") - 1
+  let s:selected_lines = split(a:str, '\n')
+  let s:trimmed_lines = map(s:selected_lines, "Trim(v:val) . ' '")
+  let s:content = join(s:trimmed_lines, '')
+  let s:content = Trim(s:content)
+  " Remove the last comma
+  let s:content = substitute(s:content, ',$', '', 'g')
+  exe "normal! '[da[x"
+  let s:line_content = Trim(getline(s:start)) . ' [' . s:content . '];' 
+  call setline(s:start, s:line_content)
+endfunction
+call MapAction('ArrayToOneLiner', '<Leader>sl')
+
+function! s:OneLinerToMultilineArray(str)
+  let [s:start, s:start_cursor] = getpos("'[")
+  let s:lines = split(a:str, ',')
+  let s:lines = map(s:lines, "Trim(v:val)")
+  let s:lines = map(s:lines, "'  ' . v:val . ','")
+  let s:cursor_line = getline(s:start)
+  let s:new_cursor_line = s:cursor_line[:s:start_cursor]
+  call setline(s:start, s:new_cursor_line)
+  let s:c = s:start + 1
+  for line in s:lines
+    exe "normal! o"
+    call setline(s:c, line)
+    let s:c += 1
+  endfor
+endfunction
+call MapAction('OneLinerToMultilineArray', '<Leader>sL')
+" TODO!
 
 function! ImportCurrentSymbol()
   " Yank the current word into @a and go to the beginning of the file
