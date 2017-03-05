@@ -31,14 +31,14 @@ source ~/vim/vimrc/plugins/syntastic.vim
 " Custom text-object plugins
 source ~/vim/vimrc/plugins/textobjects.vim
 
-" Git wrapper
-Plugin 'tpope/vim-fugitive'
+" Version control
+source ~/vim/vimrc/plugins/version_control.vim
 
 " Mappings por next/previous commands
 Plugin 'tpope/vim-unimpaired'
 
 " Autocomplete like a boss
-Plugin 'Valloric/YouCompleteMe'
+source ~/vim/vimrc/plugins/completion.vim
 
 " Comment stuff out
 Plugin 'tpope/vim-commentary'
