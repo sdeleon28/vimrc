@@ -70,3 +70,6 @@ source ~/vim/vimrc/plugins/theme.vim
 " Emmet
 Plugin 'mattn/emmet-vim'
 
+" Auto-close
+source ~/vim/vimrc/plugins/autoclose.vim
+
