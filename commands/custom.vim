@@ -146,3 +146,6 @@ function! PasteFromSystemClipboard()
 endfunction
 nnoremap <Leader>kp :call PasteFromSystemClipboard()<CR>i
 
+" Go to the first error in the current buffer
+nnoremap [; :lfirst<CR>
+
