@@ -73,3 +73,9 @@ Plugin 'mattn/emmet-vim'
 " Auto-close
 source ~/vim/vimrc/plugins/autoclose.vim
 
+" Conceal ANSI colors, coloring text properly
+Plugin 'vim-scripts/AnsiEsc.vim'
+
+" Navigate through Vim and tmux splits seamlessly
+Plugin 'christoomey/vim-tmux-navigator'
+
