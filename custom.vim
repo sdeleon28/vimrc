@@ -45,3 +45,7 @@ nnoremap <leader>i :!gwenview <cfile><cr><cr>
 " Swaps paste mode
 set pastetoggle=<F3>
 
+" Configure status line
+set laststatus=2
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
