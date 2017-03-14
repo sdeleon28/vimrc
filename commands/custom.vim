@@ -149,3 +149,6 @@ nnoremap <Leader>kp :call PasteFromSystemClipboard()<CR>i
 " Go to the first error in the current buffer
 nnoremap [; :lfirst<CR>
 
+" Open file history
+nnoremap <Leader>h :Glog<CR><CR><CR>:copen<CR>
+
