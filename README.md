@@ -6,6 +6,21 @@ I'm new to vim. Don't make fun of me -.-
 
 ## Installing
 
+### Vim version
+
+Syntastic causes problems with the newest Vim. Make sure to install version 7.4.1589 instead.
+
+This is how I installed it on macOS:
+
+```
+brew unlink vim
+brew install https://raw.githubusercontent.com/Homebrew/homebrew/7746a5509b3fb10216f1d40ab639398e8d0c5e4c/Library/Formula/vim.rb
+brew unlink macvim
+brew switch vim 7.4.1589
+```
+
+Source: https://superuser.com/questions/1059194/vim-syntastic-not-jumping-to-the-error/1059421
+
 ### Glyphs
 
 First install a patched font from nerd-fonts so that your font looks great and you have the proper glyphs for the icons. **You only need to do this in your local machine** since this will affect your terminal emulator. If you SSH into other boxes from that machine, there's no need to install nerd-fonts in each. Run:
