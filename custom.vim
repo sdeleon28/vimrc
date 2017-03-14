@@ -49,3 +49,6 @@ set pastetoggle=<F3>
 set laststatus=2
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" Mix Vim and system clipboards
+set clipboard=unnamed
+
