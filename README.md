@@ -25,7 +25,7 @@ First install Vundle. Then fire up vim and run `:PluginInstall`. That will insta
 
 ### Compiled Components
 
-Install [YouCompleteMe](Valloric/YouCompleteMe) (steps very in each platform).
+Install [YouCompleteMe](Valloric/YouCompleteMe) (steps vary in each platform).
 
 ### Colors
 
