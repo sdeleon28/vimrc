@@ -155,3 +155,8 @@ nnoremap <Leader>h :Glog<CR><CR><CR>:copen<CR>
 " Diff current file with version under cursor in quickdiff window
 nnoremap <Leader>gd /\.git<CR>wwwyw<Esc>:cclose<CR>:Gdiff <C-r>0<CR>
 
+" Simple word refactoring shortcut. Hit <Leader>r<new word> on a word to
+" refactor it. Navigate to more matches with `n` and `N` and redo refactoring
+" by hitting the dot key.
+map <Leader>r *Nciw
+

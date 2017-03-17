@@ -4,5 +4,3 @@ source ~/vim/vimrc/custom.vim
 source ~/vim/vimrc/linenumbers.vim
 source ~/vim/vimrc/commands/index.vim
 
-let g:syntastic_swift_checkers = ['swiftpm', 'swiftlint']
-

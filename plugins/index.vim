@@ -79,3 +79,11 @@ Plugin 'vim-scripts/AnsiEsc.vim'
 " Navigate through Vim and tmux splits seamlessly
 Plugin 'christoomey/vim-tmux-navigator'
 
+" Search and replace tools
+source ~/vim/vimrc/plugins/search_and_replace.vim
+
+" Swap windows
+Plugin 'wesQ3/vim-windowswap'
+
+" Encode/decode HTML
+source ~/vim/vimrc/plugins/htmlencode.vim
