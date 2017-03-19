@@ -52,3 +52,6 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Mix Vim and system clipboards
 set clipboard=unnamed
 
+" Open vertical splits on the right
+set splitright
+
