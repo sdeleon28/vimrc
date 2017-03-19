@@ -40,6 +40,9 @@ Plugin 'tpope/vim-unimpaired'
 " Autocomplete like a boss
 source ~/vim/vimrc/plugins/completion.vim
 
+" JavaScript specific plugins
+source ~/vim/vimrc/plugins/javascript.vim
+
 " Comment stuff out
 Plugin 'tpope/vim-commentary'
 
