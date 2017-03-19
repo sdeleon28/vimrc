@@ -42,6 +42,15 @@ First install Vundle. Then fire up vim and run `:PluginInstall`. That will insta
 
 Install [YouCompleteMe](Valloric/YouCompleteMe) (steps vary in each platform).
 
+### Components that require npm packages
+
+[tern\_for\_vim](ternjs/tern_for_vim) requires node packages to be installed after running `:PluginInstall`. To do so, run:
+
+```
+cd ~/.vim/bundle/tern_for_vim/
+yarn install
+```
+
 ### Colors
 
 Your theme won't work until you install the color scheme. After installing [altercation/vim-colors-solarized](https://github.com/altercation/vim-colors-solarized) (which is already installed if you already ran `:PluginInstall`), you need to copy the color scheme, like so:
