@@ -1,3 +1,4 @@
+let mapleader = ","
 source ~/vim/vimrc/plugins/plugins_boilerplate.vim
 source ~/vim/vimrc/template.vim
 source ~/vim/vimrc/custom.vim
