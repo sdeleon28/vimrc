@@ -7,3 +7,9 @@ let g:ctrlp_user_command = [
 let g:ctrlp_max_files=0
 let g:ctrlp_max_depth=40
 
+Plugin 'tacahiroy/ctrlp-funky'
+
+nnoremap <C-F> :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+" nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
+
