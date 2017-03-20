@@ -90,3 +90,7 @@ Plugin 'wesQ3/vim-windowswap'
 
 " Encode/decode HTML
 source ~/vim/vimrc/plugins/htmlencode.vim
+
+" Markdown
+source ~/vim/vimrc/plugins/markdown.vim
+
