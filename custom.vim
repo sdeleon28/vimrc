@@ -26,10 +26,6 @@ set smartindent
 " allow the . to execute once for each line of a visual selection
 vnoremap . :normal .<CR>
 
-" Configure colors
-set t_Co=256
-set term=xterm-256color
-
 " Sources the current vimscript
 nnoremap <leader>sop :source %<cr>
 

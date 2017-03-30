@@ -4,4 +4,5 @@ source ~/vim/vimrc/template.vim
 source ~/vim/vimrc/custom.vim
 source ~/vim/vimrc/linenumbers.vim
 source ~/vim/vimrc/commands/index.vim
+language en_US
 

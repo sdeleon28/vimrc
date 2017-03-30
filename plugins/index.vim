@@ -26,7 +26,8 @@ Plugin 'ryanoasis/vim-devicons'
 source ~/vim/vimrc/plugins/react.vim
 
 " Linting
-source ~/vim/vimrc/plugins/syntastic.vim
+" source ~/vim/vimrc/plugins/syntastic.vim
+source ~/vim/vimrc/plugins/ale.vim
 
 " Custom text-object plugins
 source ~/vim/vimrc/plugins/textobjects.vim
@@ -38,7 +39,8 @@ source ~/vim/vimrc/plugins/version_control.vim
 Plugin 'tpope/vim-unimpaired'
 
 " Autocomplete like a boss
-source ~/vim/vimrc/plugins/completion.vim
+" source ~/vim/vimrc/plugins/youcompleteme.vim
+source ~/vim/vimrc/plugins/deoplete.vim
 
 " JavaScript specific plugins
 source ~/vim/vimrc/plugins/javascript.vim
