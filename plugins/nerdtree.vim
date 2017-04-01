@@ -2,7 +2,7 @@
 Plugin 'scrooloose/nerdtree'
 
 " Map it
-map <C-b> :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 
 " Show hidden files by default
 let NERDTreeShowHidden=1
