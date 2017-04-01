@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = "\<Space>"
 source ~/vim/vimrc/plugins/plugins_boilerplate.vim
 source ~/vim/vimrc/template.vim
 source ~/vim/vimrc/custom.vim
