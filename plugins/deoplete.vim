@@ -18,6 +18,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'pangloss/vim-javascript'
 " Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+nnoremap <F4> :TernDef<CR>
 
 "Typescript Plugins
 " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
