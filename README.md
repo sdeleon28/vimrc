@@ -6,20 +6,7 @@ I'm new to vim. Don't make fun of me -.-
 
 ## Installing
 
-### Vim version
-
-Syntastic causes problems with the newest Vim. Make sure to install version 7.4.1589 instead.
-
-This is how I installed it on macOS:
-
-```
-brew unlink vim
-brew install https://raw.githubusercontent.com/Homebrew/homebrew/7746a5509b3fb10216f1d40ab639398e8d0c5e4c/Library/Formula/vim.rb
-brew unlink macvim
-brew switch vim 7.4.1589
-```
-
-Source: https://superuser.com/questions/1059194/vim-syntastic-not-jumping-to-the-error/1059421
+Install NeoVim, then do a buncha things.
 
 ### Glyphs
 
@@ -37,19 +24,6 @@ wget https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/install.sh
 ### Plugins
 
 First install Vundle. Then fire up vim and run `:PluginInstall`. That will install all plugins except for compiled components.
-
-### Compiled Components
-
-Install [YouCompleteMe](Valloric/YouCompleteMe) (steps vary in each platform).
-
-### Components that require npm packages
-
-[tern\_for\_vim](ternjs/tern_for_vim) requires node packages to be installed after running `:PluginInstall`. To do so, run:
-
-```
-cd ~/.vim/bundle/tern_for_vim/
-yarn install
-```
 
 ### Colors
 

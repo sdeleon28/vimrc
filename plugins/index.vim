@@ -19,9 +19,6 @@ Plugin 'tpope/vim-surround'
 " Allows repetition of non-built-in commands
 Plugin 'tpope/vim-repeat'
 
-" Adds nice icons to NERDTree
-Plugin 'ryanoasis/vim-devicons'
-
 " React-related plugins and tools
 source ~/vim/vimrc/plugins/react.vim
 
@@ -41,9 +38,6 @@ Plugin 'tpope/vim-unimpaired'
 " Autocomplete like a boss
 " source ~/vim/vimrc/plugins/youcompleteme.vim
 source ~/vim/vimrc/plugins/deoplete.vim
-
-" JavaScript specific plugins
-source ~/vim/vimrc/plugins/javascript.vim
 
 " Comment stuff out
 Plugin 'tpope/vim-commentary'
@@ -95,4 +89,9 @@ source ~/vim/vimrc/plugins/htmlencode.vim
 
 " Markdown
 source ~/vim/vimrc/plugins/markdown.vim
+
+" Adds nice icons to NERDTree
+Plugin 'ryanoasis/vim-devicons'
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+let g:airline_powerline_fonts = 1
 
