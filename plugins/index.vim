@@ -95,3 +95,6 @@ Plugin 'ryanoasis/vim-devicons'
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 let g:airline_powerline_fonts = 1
 
+" Code coverage support
+source ~/vim/vimrc/plugins/coverage.vim
+
