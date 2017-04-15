@@ -12,11 +12,11 @@ function! DoRemote(arg)
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 " Plug 'neomake/neomake', { 'on': 'Neomake' }
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 
 "Javascript Plugins
-Plug 'pangloss/vim-javascript'
-" Plug 'carlitux/deoplete-ternjs'
+" Plug 'pangloss/vim-javascript'
+Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 nnoremap <F4> :TernDef<CR>
 
@@ -31,13 +31,13 @@ let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#enable_camel_case = 1
-let g:deoplete#enable_refresh_always = 1
-let g:deoplete#max_abbr_width = 0
-let g:deoplete#max_menu_width = 0
+" let g:deoplete#enable_refresh_always = 1
+" let g:deoplete#max_abbr_width = 0
+" let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
 call deoplete#custom#set('_', 'matchers', ['matcher_full_fuzzy'])
 
-let g:tern_request_timeout = 1
+" let g:tern_request_timeout = 1
 let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
@@ -57,5 +57,3 @@ let g:tern#arguments = ["--persistent"]
 "   \ 'texthl': 'ErrorMsg',
 "   \ }
 
-" Potentially fixes weird behavior with omnifunc
-set completeopt=menuone,longest
