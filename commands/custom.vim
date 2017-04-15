@@ -181,3 +181,14 @@ endfunction
 nnoremap <C-U> :call SmoothScroll(1)<Enter>
 nnoremap <C-D> :call SmoothScroll(0)<Enter>
 
+function EnableSpellCheck()
+  setlocal spell
+  highlight clear SpellBad
+  highlight SpellBad term=standout ctermfg=1 term=underline cterm=underline
+endfunction
+function DisableSpellCheck()
+  setlocal nospell
+endfunction
+nnoremap <Leader>es :call EnableSpellCheck()<Enter>
+nnoremap <Leader>ds :call DisableSpellCheck()<Enter>
+
