@@ -15,7 +15,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 " Plug 'ludovicchabant/vim-gutentags'
 
 "Javascript Plugins
-" Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+let g:jsx_ext_required = 0
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 nnoremap <F4> :TernDef<CR>
