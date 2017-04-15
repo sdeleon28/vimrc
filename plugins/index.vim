@@ -76,7 +76,7 @@ source ~/vim/vimrc/plugins/autoclose.vim
 Plugin 'vim-scripts/AnsiEsc.vim'
 
 " Navigate through Vim and tmux splits seamlessly
-Plugin 'christoomey/vim-tmux-navigator'
+source ~/vim/vimrc/plugins/tmux.vim
 
 " Search and replace tools
 source ~/vim/vimrc/plugins/search_and_replace.vim
