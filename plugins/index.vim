@@ -98,3 +98,5 @@ let g:airline_powerline_fonts = 1
 " Code coverage support
 source ~/vim/vimrc/plugins/coverage.vim
 
+" Snippets
+source ~/vim/vimrc/plugins/ultisnips.vim
