@@ -29,6 +29,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
 nnoremap <F4> :TernDef<CR>
+" The next line is similar to :TernDef but is faster and more reliable.
+" Takes you straight to the const/class/function/default export definition of
+" the thing under the cursor.
+nnoremap <Leader><Leader> yiwgd:YcmCompleter GoToDefinition<CR>gg/\(\(const\\|class\\|function\) <C-r>0\\|export default\)<CR>
 
 call plug#end()
 

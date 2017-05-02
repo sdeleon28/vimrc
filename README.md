@@ -22,7 +22,25 @@ If you're on linux, look for instructions on how to install a patched font in [t
 
 ### Plugins
 
-First install Vundle and vim-plug. Then fire up vim and run `:PluginInstall` and `:PlugInstall`. **TODO:** Migrate everything to vim-plug (or evaluate other options so that I don't change managers every week).
+First install Vundle and vim-plug. Then fire up vim and run `:PluginInstall` and `:PlugInstall`.
+
+**TODO:** Migrate everything to vim-plug (or evaluate other options so that I don't change managers every week).
+
+### YouCompleteMe
+
+Install this following the readme. Make sure to include the `--tern-completer` flag.
+
+**TODO:** Automate this with vim-plug.
+
+### jsctags
+
+Install the jsctags executable with:
+
+```
+npm install -g git+https://github.com/ramitos/jsctags.git
+```
+
+**TODO:** Automate this with vim-plug.
 
 ### Colors
 
