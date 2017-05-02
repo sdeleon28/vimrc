@@ -164,9 +164,13 @@ map <Leader>r *Nciw
 function SmoothScroll(up)
 		set scroll=10
     if a:up
-        let scrollaction=""
+        " Swap these lines to prevent the cursor from moving
+        " let scrollaction=""
+        let scrollaction="k"
     else
-        let scrollaction=""
+        " Swap these lines to prevent the cursor from moving
+        " let scrollaction=""
+        let scrollaction="j"
     endif
     exec "normal " . scrollaction
     redraw
@@ -176,6 +180,9 @@ function SmoothScroll(up)
         sleep 10m
         redraw
         exec "normal " . scrollaction
+        " Comment the next line if you'r using <C-y>/<C-e> as
+        " scroll actions, or else they'll do nothing.
+        exec "normal zz"
     endwhile
 endfunction
 nnoremap <C-U> :call SmoothScroll(1)<Enter>
