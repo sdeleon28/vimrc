@@ -8,6 +8,7 @@ colorscheme lucario
 " solarized
 set background=dark
 let g:airline_theme='solarized'
+let g:airline_skip_empty_sections = 1
 
 " highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
 " highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
