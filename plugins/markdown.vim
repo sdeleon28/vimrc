@@ -1,8 +1,8 @@
-Plugin 'tpope/vim-markdown'
+Plug 'tpope/vim-markdown'
 " let g:markdown_syntax_conceal = 0
 let g:markdown_fenced_languages = ['javascript', 'html', 'python', 'bash=sh']
 
-Plugin 'jtratner/vim-flavored-markdown'
+Plug 'jtratner/vim-flavored-markdown'
 
 augroup markdown
     au!

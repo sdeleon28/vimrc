@@ -1,4 +1,4 @@
-Plugin 'spf13/vim-autoclose'
+Plug 'spf13/vim-autoclose'
 let g:autoclose_vim_commentmode = 1
 
 " inoremap {<CR> {<CR><Tab><CR>0<C-D>}<UP>

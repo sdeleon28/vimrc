@@ -1,4 +1,4 @@
-Plugin 'retorillo/istanbul.vim'
+Plug 'retorillo/istanbul.vim'
 "
 " Uncomment the next line to customize the coverage file
 " let g:istanbul#jsonPath = ['coverage/custom.json', 'coverage/coverage.json']
