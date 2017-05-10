@@ -101,3 +101,6 @@ source ~/vim/vimrc/plugins/coverage.vim
 " Snippets
 source ~/vim/vimrc/plugins/ultisnips.vim
 
+" REST client
+source ~/vim/vimrc/plugins/vrc.vim
+
