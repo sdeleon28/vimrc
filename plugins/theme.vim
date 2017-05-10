@@ -1,6 +1,6 @@
 " Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 syntax enable
 colorscheme lucario
 " basic-dark

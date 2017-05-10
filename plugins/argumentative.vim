@@ -1,4 +1,4 @@
-Plugin 'PeterRincker/vim-argumentative'
+Plug 'PeterRincker/vim-argumentative'
 
 " Uncomment one of these mappings to customize
 

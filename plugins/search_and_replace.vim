@@ -1,3 +1,3 @@
-Plugin 'henrik/git-grep-vim'
-Plugin 'henrik/vim-qargs'
+Plug 'henrik/git-grep-vim'
+Plug 'henrik/vim-qargs'
 

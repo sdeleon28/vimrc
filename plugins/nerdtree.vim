@@ -1,5 +1,5 @@
 " NERDTree Sidebar
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 
 " Map it
 map <Leader>n :NERDTreeToggle<CR>
@@ -12,7 +12,7 @@ let NERDTreeShowHidden=1
 let NERDTreeRespectWildIgnore=1
 
 " Hide files from .gitignore
-Plugin 'octref/RootIgnore'
+Plug 'octref/RootIgnore'
 
 " Shows git status for files
 "Plugin 'Xuyuanp/nerdtree-git-plugin'

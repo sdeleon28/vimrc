@@ -1,2 +1,2 @@
-Plugin 'keith/swift.vim'
+Plug 'keith/swift.vim'
 

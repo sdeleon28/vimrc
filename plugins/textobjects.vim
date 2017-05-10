@@ -1,5 +1,5 @@
-Plugin 'kana/vim-textobj-user'
-Plugin 'kana/vim-textobj-indent'
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-line'
 

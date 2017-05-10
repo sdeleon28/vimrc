@@ -1,5 +1,5 @@
-Plugin 'vim-syntastic/syntastic'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plug 'vim-syntastic/syntastic'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
