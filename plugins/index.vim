@@ -104,3 +104,6 @@ source ~/vim/vimrc/plugins/ultisnips.vim
 " REST client
 source ~/vim/vimrc/plugins/vrc.vim
 
+" Tags
+source ~/vim/vimrc/plugins/ctags.vim
+
