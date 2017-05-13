@@ -107,3 +107,6 @@ source ~/vim/vimrc/plugins/vrc.vim
 " Tags
 source ~/vim/vimrc/plugins/ctags.vim
 
+" My first plugin: A task manager for Vim
+Plug 'sdeleon28/vim-todo'
+
