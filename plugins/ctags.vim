@@ -7,4 +7,6 @@ Plug 'craigemery/vim-autotag'
 " ctags --javascript-kinds=-c-f-m-p-v -R -a -f .tags .
 let g:autotagCtagsCmd="ctags --javascript-kinds=-c-f-m-p-v -a -f .tags"
 let g:autotagTagsFile=".tags"
+" Don't remove the trailing space in the next line
+nnoremap <Leader>t :tag 
 
