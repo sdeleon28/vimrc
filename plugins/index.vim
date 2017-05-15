@@ -46,7 +46,7 @@ Plug 'tpope/vim-commentary'
 Plug 'vim-scripts/ReplaceWithRegister'
 
 " Make titles pretty
-Plug 'christoomey/vim-titlecase'
+" Plug 'christoomey/vim-titlecase'
 
 " Sort stuff using motions
 Plug 'christoomey/vim-sort-motion'
