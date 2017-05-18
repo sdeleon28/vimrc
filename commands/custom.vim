@@ -200,7 +200,15 @@ function FollowJsReference()
   let s:filename = @r
   if s:filename[0] == '.'
     " Treat it as a relative reference
-    exec ":edit " . s:filename . ".js"
+    let s:file_with_js = s:filename . ".js"
+    let s:file_with_index_js = s:filename . "/index.js"
+    if filereadable(s:file_with_js)
+      exec ":edit " . s:file_with_js
+    elseif filereadable(s:file_with_index_js)
+      exec ":edit " . s:file_with_index_js
+    else
+      echo "Couldn't find reference"
+    endif
   else
     " Create a file at the root with the code for babel-node to resolve the
     " reference. Ideally, I'd do this with babel-node's eval, but it errors out.
