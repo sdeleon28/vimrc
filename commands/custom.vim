@@ -193,7 +193,7 @@ nnoremap <Leader>es :call EnableSpellCheck()<Enter>
 nnoremap <Leader>ds :call DisableSpellCheck()<Enter>
 
 " Follow JavaScript references with proper babel (and module-resolver)
-" resolution (required a git repo in the project's root)
+" resolution (requires a git repo in the project's root)
 function FollowJsReference()
   " Find the reference and yank it into the r register
   exec "normal ^f'\"ryi'"
