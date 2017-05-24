@@ -227,3 +227,11 @@ function FollowJsReference()
 endfunction
 nnoremap <Leader>gj :call FollowJsReference()<CR>
 
+function FindSymbolInProject()
+  exec 'normal "ryiw'
+  exec "GitGrep -w '" . @r . "' -- :/"
+endfunction
+nnoremap <Leader>f :call FindSymbolInProject()<CR>
+
+nnoremap <Leader>j :%!python -m json.tool<CR>
+
