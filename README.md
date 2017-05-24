@@ -25,5 +25,5 @@ If you're on Windows, may the force be with you.
 
 ### Colors
 
-I'm using the lucario color theme. In order for it to play nice with iTerm, you have to import some color settings into your iTerm profile. Unfortunately, I didn't document this when I did it, so you might need to google how to do that. **TODO**: Document this process.
+I'm using the lucario color theme. In order for it to play nice with iTerm, you have to import some color settings into your iTerm profile. To do that, follow the instructions in lucario's [README](https://github.com/raphamorim/lucario#iterm) file.
 
