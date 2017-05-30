@@ -134,7 +134,7 @@ function! ImportCurrentSymbol()
 endfunction
 " Run the function and go into insert mode
 " (for some reason, putting the "i" in the normal! command doesn't work
-nnoremap <Leader>i :call ImportCurrentSymbol()<CR>i
+" nnoremap <Leader>i :call ImportCurrentSymbol()<CR>i
 
 function! s:CopyToSystemClipboard(str)
   let @+ = a:str
@@ -234,4 +234,21 @@ endfunction
 nnoremap <Leader>f :call FindSymbolInProject()<CR>
 
 nnoremap <Leader>j :%!python -m json.tool<CR>
+
+nnoremap <F7> :set conceallevel=0<CR>
+nnoremap <F8> :set conceallevel=1<CR>
+
+" Git log helper mappings
+nnoremap <Leader>ly <^f;fmlye
+nnoremap <Leader>le <^f;fml"lye:Gvsplit <C-r>l<CR>
+nnoremap <Leader>ll :new<CR>:call fugitive#detect(getcwd())<CR>:set readonly<CR>:r!git lg<CR><CR>ggdd:AnsiEsc<CR>
+" TODO: Make this one confirm the dialogue and refresh the log (if successful)
+nnoremap <Leader>lc <^f;fml"lye:Git checkout <C-r>l<CR>
+
+" fbsimctl helper mappings
+nnoremap <Leader>ilb :new<CR>:r!fbsimctl list \| grep Booted<CR>ggdd
+nnoremap <Leader>ils :new<CR>:r!fbsimctl list \| grep Shutdown<CR>ggdd
+nnoremap <Leader>ill :new<CR>:r!fbsimctl list<CR>ggdd
+nnoremap <Leader>ib ^"fyiW:!fbsimctl <C-r>f boot &<CR>
+nnoremap <Leader>is ^"fyiW:!fbsimctl <C-r>f shutdown &<CR>
 

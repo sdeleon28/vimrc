@@ -36,7 +36,7 @@ source ~/vim/vimrc/plugins/version_control.vim
 Plug 'tpope/vim-unimpaired'
 
 " Autocomplete like a boss
-source ~/vim/vimrc/plugins/youcompleteme.vim
+" source ~/vim/vimrc/plugins/youcompleteme.vim
 " source ~/vim/vimrc/plugins/deoplete.vim
 
 " Comment stuff out
@@ -109,4 +109,7 @@ source ~/vim/vimrc/plugins/ctags.vim
 
 " My first plugin: A task manager for Vim
 Plug 'sdeleon28/vim-todo'
+
+" Support local vimrc files in your projects
+source ~/vim/vimrc/plugins/localvimrc.vim
 
