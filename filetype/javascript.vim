@@ -26,5 +26,7 @@ augroup filetype_javascript
   autocmd FileType javascript iabbrev import NOPENOPENOPE
   autocmd FileType javascript let &formatprg = s:prettier_cmd
   autocmd FileType javascript nnoremap <Leader>p gggqG<C-O><C-O>
+  autocmd FileType javascript nnoremap <Leader>f Vi}zf
+  autocmd FileType javascript nnoremap <Leader>t Vitzf
 augroup END
 
