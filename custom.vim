@@ -48,3 +48,5 @@ set clipboard=unnamed
 " Open vertical splits on the right
 set splitright
 
+" Set up the dictionary to enable <c-x><c-k> completions
+set dictionary=/usr/share/dict/words
