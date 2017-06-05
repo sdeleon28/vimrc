@@ -251,4 +251,5 @@ nnoremap <Leader>ils :new<CR>:r!fbsimctl list \| grep Shutdown<CR>ggdd
 nnoremap <Leader>ill :new<CR>:r!fbsimctl list<CR>ggdd
 nnoremap <Leader>ib ^"fyiW:!fbsimctl <C-r>f boot &<CR>
 nnoremap <Leader>is ^"fyiW:!fbsimctl <C-r>f shutdown &<CR>
+nnoremap <Leader>if :!rm ~/Library/Preferences/com.apple.iphonesimulator.plist<CR>
 
