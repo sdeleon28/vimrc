@@ -1,17 +1,21 @@
-" Plugin 'altercation/vim-colors-solarized'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 syntax enable
 colorscheme lucario
 " basic-dark
 " basic-light
 " solarized
 set background=dark
-let g:airline_theme='solarized'
-let g:airline_skip_empty_sections = 1
 
-" highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-" highlight DiffDelete cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-" highlight DiffChange cterm=bold ctermfg=10 ctermbg=17 gui=none guifg=bg guibg=Red
-" highlight DiffText   cterm=bold ctermfg=10 ctermbg=88 gui=none guifg=bg guibg=Red
+" vim-airline configs
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" let g:airline_theme='solarized'
+" let g:airline_skip_empty_sections = 1
+
+function! StatuslineInit()
+  " let s:branch = system('git rev-parse --abbrev-ref HEAD')
+  " let s:branch = substitute(s:branch, '[\n\r]', '', 'g')
+  " let &statusline = '%F%=' . s:branch
+  let &statusline = '%F'
+endfunction
+autocmd VimEnter * call StatuslineInit()
 
