@@ -39,8 +39,10 @@ nnoremap <leader>i :!gwenview <cfile><cr><cr>
 set pastetoggle=<F3>
 
 " Configure status line
-set laststatus=2
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set laststatus=2
+" Full status line with bells and whistles
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" Minimalistic statusline
 
 " Mix Vim and system clipboards
 set clipboard=unnamed
