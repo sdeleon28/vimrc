@@ -41,3 +41,7 @@ onoremap il] :<c-u>execute "normal! ?[\r:nohlsearch\rvi["<cr>
 onoremap al[ :<c-u>execute "normal! ?[\r:nohlsearch\rva["<cr>
 onoremap al] :<c-u>execute "normal! ?[\r:nohlsearch\rva["<cr>
 
+" Portion of a path between slashes /
+onoremap i/ :<c-u>execute "normal! T/vt/"<cr>
+onoremap a/ :<c-u>execute "normal! F/vf/"<cr>
+
