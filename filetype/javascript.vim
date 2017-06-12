@@ -9,6 +9,8 @@ let g:session_default_name = FindSessionDirectory()
 let s:prettier_rel = finddir('node_modules', '.;') . '/prettier-eslint-cli/dist/index.js --stdin'
 let s:prettier_cmd = g:session_default_name . '/' . s:prettier_rel
 
+let s:ctags_cmd = "{CTAGS} --javascript-kinds=-c-f-m-p-v -R -a {DIRECTORY}"
+
 augroup filetype_javascript
   autocmd!
   autocmd FileType javascript iabbrev rr return
@@ -26,7 +28,8 @@ augroup filetype_javascript
   autocmd FileType javascript iabbrev import NOPENOPENOPE
   autocmd FileType javascript let &formatprg = s:prettier_cmd
   autocmd FileType javascript nnoremap <Leader>p gggqG<C-O><C-O>
-  autocmd FileType javascript nnoremap <Leader>f Vi}zf
+  " autocmd FileType javascript nnoremap <Leader>f Vi}zf
   autocmd FileType javascript nnoremap <Leader>t Vitzf
+  autocmd FileType javascript let g:vim_tags_project_tags_command = s:ctags_cmd
 augroup END
 

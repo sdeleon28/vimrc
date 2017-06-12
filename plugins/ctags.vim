@@ -1,12 +1,8 @@
 " If you're interested in ctags, do yourself a favor and read this article:
 " http://andrewradev.com/2011/06/08/vim-and-ctags/
 
-set tags=./.tags,.tags;
-Plug 'craigemery/vim-autotag'
-" To generate tags for the first time, run this from the root of your project:
-" ctags --javascript-kinds=-c-f-m-p-v -R -a -f .tags .
-let g:autotagCtagsCmd="ctags --javascript-kinds=-c-f-m-p-v -a -f .tags"
-let g:autotagTagsFile=".tags"
-" Don't remove the trailing space in the next line
-nnoremap <Leader>t :tag 
+set tags=./tags,tags;
+Plug 'szw/vim-tags'
+" Customize the command for each different language by using a line like this
+" let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/null"
 

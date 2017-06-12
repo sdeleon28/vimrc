@@ -113,3 +113,6 @@ Plug 'sdeleon28/vim-todo'
 " Support local vimrc files in your projects
 source ~/vim/vimrc/plugins/localvimrc.vim
 
+" C++
+source ~/vim/vimrc/plugins/cpp.vim
+
