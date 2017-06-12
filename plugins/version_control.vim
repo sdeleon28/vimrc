@@ -1,5 +1,6 @@
 " Git wrapper
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 
 " Make vimdiff use vertical splits for 3-way merges
 set diffopt=vertical
