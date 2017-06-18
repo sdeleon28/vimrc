@@ -114,5 +114,8 @@ Plug 'sdeleon28/vim-todo'
 source ~/vim/vimrc/plugins/localvimrc.vim
 
 " C++
-source ~/vim/vimrc/plugins/cpp.vim
+" source ~/vim/vimrc/plugins/cpp.vim
+
+" REPL integration
+source ~/vim/vimrc/plugins/repl.vim
 
