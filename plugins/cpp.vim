@@ -2,9 +2,9 @@ let s:ctags_cmd =  "{CTAGS} -R --sort=1 --c++-kinds=+p --fields=+iaS --extra=+q 
 
 augroup filetype_cpp
   autocmd!
-  au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-  au FileType cpp let g:vim_tags_project_tags_command = s:ctags_cmd
-  au FileType cpp setlocal tags+=~/.vim/tags/cpp
+  autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp setlocal omnifunc=omni#cpp#complete#Main
+  autocmd FileType cpp let g:vim_tags_project_tags_command = s:ctags_cmd
+  autocmd FileType cpp setlocal tags+=~/.vim/tags/cpp
 augroup END
 
 " OmniCppComplete
