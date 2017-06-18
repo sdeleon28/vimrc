@@ -15,7 +15,7 @@ function! StatuslineInit()
   " let s:branch = system('git rev-parse --abbrev-ref HEAD')
   " let s:branch = substitute(s:branch, '[\n\r]', '', 'g')
   " let &statusline = '%F%=' . s:branch
-  let &statusline = '%F'
+  let &statusline = '%F%m%r'
 endfunction
 autocmd VimEnter * call StatuslineInit()
 
