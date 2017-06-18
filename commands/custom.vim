@@ -227,12 +227,6 @@ function FollowJsReference()
 endfunction
 nnoremap <Leader>gj :call FollowJsReference()<CR>
 
-function FindSymbolInProject()
-  exec 'normal "ryiw'
-  exec "GitGrep -w '" . @r . "' -- :/"
-endfunction
-nnoremap <Leader>f :call FindSymbolInProject()<CR>
-
 nnoremap <Leader>j :%!python -m json.tool<CR>
 
 nnoremap <F7> :set conceallevel=0<CR>
@@ -252,4 +246,28 @@ nnoremap <Leader>ill :new<CR>:r!fbsimctl list<CR>ggdd
 nnoremap <Leader>ib ^"fyiW:!fbsimctl <C-r>f boot &<CR>
 nnoremap <Leader>is ^"fyiW:!fbsimctl <C-r>f shutdown &<CR>
 nnoremap <Leader>if :!rm ~/Library/Preferences/com.apple.iphonesimulator.plist<CR>
+
+" Faster searching
+function FindSymbolInProject()
+  exec 'normal "ryiw'
+  exec "GitGrep -w '" . @r . "' -- :/"
+endfunction
+nnoremap <Leader>f :call FindSymbolInProject()<CR>
+nnoremap <f1> :GitGrep 
+nnoremap <f2> :GitGrep -w 
+
+" Load changes in quickfix list
+" How to escape bash?
+" function LoadChangesInQF()
+"   new
+"   exec "r!REL_FILES=$(git status --porcelain \| awk '{printf \"\\%s|1|\\n\", $2}'); for f in ${REL_FILES}; do echo $(pwd)/${f}; done;"
+"   cgetbuffer
+"   exec ":q!"
+"   cfirst
+" endfunction
+" nnoremap <F10> :call LoadChangesInQF()<CR>
+
+" Search with Perl/Python-style regexes
+nnoremap / /\v
+vnoremap / /\v
 
