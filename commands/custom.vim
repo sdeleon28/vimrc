@@ -233,9 +233,17 @@ nnoremap <F7> :set conceallevel=0<CR>
 nnoremap <F8> :set conceallevel=1<CR>
 
 " Git log helper mappings
+function StartLog()
+  new
+  silent read ! git lg
+  normal ggdd
+  set filetype=gitlog
+  set readonly
+  AnsiEsc
+endfunction
+nnoremap <silent> <Leader>ll :call StartLog()<cr>
 nnoremap <Leader>ly <^f;fmlye
 nnoremap <Leader>le <^f;fml"lye:Gvsplit <C-r>l<CR>
-nnoremap <Leader>ll :new<CR>:call fugitive#detect(getcwd())<CR>:set readonly<CR>:r!git lg<CR><CR>:set ft=gitlog<CR>ggdd:AnsiEsc<CR>
 " TODO: Make this one confirm the dialogue and refresh the log (if successful)
 nnoremap <Leader>lc <^f;fml"lye:Git checkout <C-r>l<CR>
 augroup filetype_gitlog
