@@ -235,7 +235,7 @@ nnoremap <F8> :set conceallevel=1<CR>
 " Git log helper mappings
 function StartLog()
   new
-  silent read ! git lg
+  silent read ! git log --graph --abbrev-commit --decorate --format=format:'\%C(bold blue)\%h\%C(reset) - \%C(bold cyan)\%aD\%C(reset) \%C(bold green)(\%ar)\%C(reset)\%C(auto)\%d\%C(reset)\%n''          \%C(white)\%s\%C(reset) \%C(dim white)- \%an\%C(reset)' --all
   normal ggdd
   set filetype=gitlog
   set readonly
