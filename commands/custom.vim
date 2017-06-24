@@ -235,9 +235,14 @@ nnoremap <F8> :set conceallevel=1<CR>
 " Git log helper mappings
 nnoremap <Leader>ly <^f;fmlye
 nnoremap <Leader>le <^f;fml"lye:Gvsplit <C-r>l<CR>
-nnoremap <Leader>ll :new<CR>:call fugitive#detect(getcwd())<CR>:set readonly<CR>:r!git lg<CR><CR>ggdd:AnsiEsc<CR>
+nnoremap <Leader>ll :new<CR>:call fugitive#detect(getcwd())<CR>:set readonly<CR>:r!git lg<CR><CR>:set ft=gitlog<CR>ggdd:AnsiEsc<CR>
 " TODO: Make this one confirm the dialogue and refresh the log (if successful)
 nnoremap <Leader>lc <^f;fml"lye:Git checkout <C-r>l<CR>
+augroup filetype_gitlog
+  autocmd!
+  autocmd FileType gitlog nnoremap <c-n> /\v*.*([a-h0-9]{9})<cr>:nohl<cr>
+  autocmd FileType gitlog nnoremap <c-p> ?\v*.*([a-h0-9]{9})<cr>:nohl<cr>
+augroup END
 
 " fbsimctl helper mappings
 nnoremap <Leader>ilb :new<CR>:r!fbsimctl list \| grep Booted<CR>ggdd
@@ -267,7 +272,6 @@ nnoremap <f2> :GitGrep -w
 " endfunction
 " nnoremap <F10> :call LoadChangesInQF()<CR>
 
-" Search with Perl/Python-style regexes
-nnoremap / /\v
-vnoremap / /\v
+" Make it easier to navigate between pairs
+nnoremap <tab> %
 
