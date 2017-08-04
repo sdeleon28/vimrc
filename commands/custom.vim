@@ -150,7 +150,7 @@ nnoremap <Leader>kp :call PasteFromSystemClipboard()<CR>i
 nnoremap [; :lfirst<CR>
 
 " Open file history
-nnoremap <Leader>h :Glog<CR><CR><CR>:copen<CR>
+nnoremap <Leader>h :Glog --follow<CR><CR><CR>:copen<CR>
 
 " Diff current file with version under cursor in quickdiff window
 nnoremap <Leader>gd /\.git<CR>wwwyw<Esc>:cclose<CR>:Gdiff <C-r>0<CR>
