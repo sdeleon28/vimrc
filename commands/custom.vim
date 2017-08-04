@@ -287,3 +287,5 @@ nnoremap \ $
 onoremap \| ^
 onoremap \ $
 
+" Load TODOs in quickfix
+nnoremap <F9> :GitGrep -w 'TODO' -- :/ :!/lib '*.js'<cr>
