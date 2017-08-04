@@ -228,7 +228,7 @@ function FollowJsReference()
 endfunction
 nnoremap <Leader>gj :call FollowJsReference()<CR>
 
-nnoremap <Leader>j :%!python -m json.tool<CR>
+nnoremap <Leader>json :%!python -m json.tool<CR>
 
 nnoremap <F7> :set conceallevel=0<CR>
 nnoremap <F8> :set conceallevel=1<CR>
