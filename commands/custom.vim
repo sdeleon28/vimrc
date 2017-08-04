@@ -266,7 +266,7 @@ function FindSymbolInProject()
   exec 'normal "ryiw'
   exec "GitGrep -w '" . @r . "' -- :/"
 endfunction
-nnoremap <Leader>f :call FindSymbolInProject()<CR>
+nnoremap <Leader>fs :call FindSymbolInProject()<CR>
 nnoremap <f1> :GitGrep 
 nnoremap <f2> :GitGrep -w 
 
