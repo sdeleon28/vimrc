@@ -281,6 +281,9 @@ nnoremap <f2> :GitGrep -w
 " endfunction
 " nnoremap <F10> :call LoadChangesInQF()<CR>
 
-" Make it easier to navigate between pairs
-nnoremap <tab> %
+" Make navigation easier
+nnoremap \| ^
+nnoremap \ $
+onoremap \| ^
+onoremap \ $
 
