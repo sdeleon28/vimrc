@@ -214,14 +214,15 @@ function FollowJsReference()
     " reference. Ideally, I'd do this with babel-node's eval, but it errors out.
     " Instead, I create a script, evaluate it then delete it.
     let s:script_content = 'console.log(require.resolve("' . @r . '"));'
-    let s:create_command = 'tee `git rev-parse --show-toplevel`/___resolve.js'
+    let s:root_dir = systemlist('dirname $(. ~/vim/vimrc/scripts/find-ancestor.sh .babelrc)')[0]
+    let s:create_command = 'tee ' . s:root_dir . '/___resolve.js'
     call system(s:create_command, s:script_content)
     " Run babel-node from the root dir
-    let s:babel_command = 'cd `git rev-parse --show-toplevel` && babel-node ./___resolve.js'
+    let s:babel_command = 'cd  ' . s:root_dir . '&& babel-node ./___resolve.js'
     let s:out = system(s:babel_command)
     exec ":edit " . s:out
     " Clean up
-    let s:delete_command = 'rm `git rev-parse --show-toplevel`/___resolve.js'
+    let s:delete_command = 'rm ' . s:root_dir . '/___resolve.js'
     call system(s:delete_command)
   endif
 endfunction
