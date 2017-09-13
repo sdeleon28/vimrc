@@ -16,8 +16,6 @@ onoremap in( :<c-u>execute "normal! /(\r:nohlsearch\rvi("<cr>
 onoremap in) :<c-u>execute "normal! /(\r:nohlsearch\rvi("<cr>
 onoremap an( :<c-u>execute "normal! /(\r:nohlsearch\rva("<cr>
 onoremap an) :<c-u>execute "normal! /(\r:nohlsearch\rva("<cr>
-onoremap il( :<c-u>execute "normal! ?(\r:nohlsearch\rvi("<cr>
-onoremap il) :<c-u>execute "normal! ?(\r:nohlsearch\rvi("<cr>
 onoremap al( :<c-u>execute "normal! ?(\r:nohlsearch\rva("<cr>
 onoremap al) :<c-u>execute "normal! ?(\r:nohlsearch\rva("<cr>
 
@@ -26,8 +24,6 @@ onoremap in{ :<c-u>execute "normal! /{\r:nohlsearch\rvi{"<cr>
 onoremap in} :<c-u>execute "normal! /{\r:nohlsearch\rvi{"<cr>
 onoremap an{ :<c-u>execute "normal! /{\r:nohlsearch\rva{"<cr>
 onoremap an} :<c-u>execute "normal! /{\r:nohlsearch\rva{"<cr>
-onoremap il{ :<c-u>execute "normal! ?{\r:nohlsearch\rvi{"<cr>
-onoremap il} :<c-u>execute "normal! ?{\r:nohlsearch\rvi{"<cr>
 onoremap al{ :<c-u>execute "normal! ?{\r:nohlsearch\rva{"<cr>
 onoremap al} :<c-u>execute "normal! ?{\r:nohlsearch\rva{"<cr>
 
@@ -36,8 +32,6 @@ onoremap in[ :<c-u>execute "normal! /[\r:nohlsearch\rvi["<cr>
 onoremap in] :<c-u>execute "normal! /[\r:nohlsearch\rvi["<cr>
 onoremap an[ :<c-u>execute "normal! /[\r:nohlsearch\rva["<cr>
 onoremap an] :<c-u>execute "normal! /[\r:nohlsearch\rva["<cr>
-onoremap il[ :<c-u>execute "normal! ?[\r:nohlsearch\rvi["<cr>
-onoremap il] :<c-u>execute "normal! ?[\r:nohlsearch\rvi["<cr>
 onoremap al[ :<c-u>execute "normal! ?[\r:nohlsearch\rva["<cr>
 onoremap al] :<c-u>execute "normal! ?[\r:nohlsearch\rva["<cr>
 
