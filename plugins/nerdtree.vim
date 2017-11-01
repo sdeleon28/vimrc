@@ -12,7 +12,7 @@ let NERDTreeShowHidden=1
 let NERDTreeRespectWildIgnore=1
 
 " Hide files from .gitignore
-Plug 'octref/RootIgnore'
+"Plug 'octref/RootIgnore'
 
 " Shows git status for files
 "Plugin 'Xuyuanp/nerdtree-git-plugin'
