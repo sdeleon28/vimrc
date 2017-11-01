@@ -6,8 +6,7 @@ function FindSessionDirectory() abort
   return getcwd()
 endfunction!
 let g:session_default_name = FindSessionDirectory()
-let s:prettier_rel = finddir('node_modules', '.;') . '/prettier-eslint-cli/dist/index.js --stdin'
-let s:prettier_cmd = g:session_default_name . '/' . s:prettier_rel
+let s:prettier_cmd = g:session_default_name . '/node_modules/prettier-eslint-cli/dist/index.js --stdin'
 
 let s:ctags_cmd = "{CTAGS} --javascript-kinds=-c-f-m-p-v -R -a {DIRECTORY}"
 
