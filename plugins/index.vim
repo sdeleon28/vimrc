@@ -119,3 +119,6 @@ source ~/vim/vimrc/plugins/localvimrc.vim
 " REPL integration
 source ~/vim/vimrc/plugins/repl.vim
 
+" Inline evaluation
+Plug 'metakirby5/codi.vim'
+
