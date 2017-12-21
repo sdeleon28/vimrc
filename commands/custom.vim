@@ -292,6 +292,27 @@ onoremap \ $
 " Load TODOs in quickfix
 nnoremap <F9> :GitGrep -w 'TODO' -- :/ :!/lib '*.js'<cr>
 
+function GoToMapping()
+  let s:current_file = expand('%:p:h')
+  let s:path_parts = split(s:current_file, '/')
+  let s:src_index = 0
+  let s:i = 0
+  for part in s:path_parts
+    if part == 'src'
+      let s:src_index = s:i
+    endif
+    let s:i += 1
+  endfor
+  if s:src_index == 0
+    echom 'src/ dir not found in current path'
+  else
+    echo s:src_index
+  endif
+  let s:mapping_path = '/' . join(s:path_parts[:s:src_index], '/') . '/core/mappings/' . join(s:path_parts[s:src_index + 2:], '/') . '/index.js'
+  execute 'edit' s:mapping_path
+endfunction
+nnoremap <Leader>map :call GoToMapping()<CR>
+
 " Custom unimpaired-like mappings
 nnoremap <silent> ]d :on<CR>:next<CR>:Gdiff HEAD<CR>
 nnoremap <silent> [d :on<CR>:prev<CR>:Gdiff HEAD<CR>
