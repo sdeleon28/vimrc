@@ -13,3 +13,7 @@ nnoremap <C-F> :CtrlPFunky<Cr>
 " narrow the list down with a word under cursor
 " nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
+Plug 'kshenoy/vim-ctrlp-args'
+
+nnoremap <C-G> :CtrlPArgs<Cr>
+
