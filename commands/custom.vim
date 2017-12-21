@@ -233,6 +233,8 @@ nnoremap <Leader>json :%!python -m json.tool<CR>
 nnoremap <F7> :set conceallevel=0<CR>
 nnoremap <F8> :set conceallevel=1<CR>
 
+nnoremap <F12> :Gdiff HEAD<CR>
+
 " Git log helper mappings
 function StartLog()
   new
@@ -289,3 +291,7 @@ onoremap \ $
 
 " Load TODOs in quickfix
 nnoremap <F9> :GitGrep -w 'TODO' -- :/ :!/lib '*.js'<cr>
+
+" Custom unimpaired-like mappings
+nnoremap <silent> ]d :on<CR>:next<CR>:Gdiff HEAD<CR>
+nnoremap <silent> [d :on<CR>:prev<CR>:Gdiff HEAD<CR>
