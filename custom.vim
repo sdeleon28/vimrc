@@ -12,7 +12,7 @@ set backupdir=~/tmp
 
 " Automatically change dir when switching files.
 " This enables :compl-filename to give me proper relative filenames.
-set autochdir
+autocmd BufEnter * silent! lcd %:p:h
 
 " Use 2 spaces for indentation
 set ts=2
