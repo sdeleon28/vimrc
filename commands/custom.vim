@@ -218,7 +218,7 @@ function FollowJsReference()
     let s:create_command = 'tee ' . s:root_dir . '/___resolve.js'
     call system(s:create_command, s:script_content)
     " Run babel-node from the root dir
-    let s:babel_command = 'cd  ' . s:root_dir . '&& babel-node ./___resolve.js'
+    let s:babel_command = 'cd  ' . s:root_dir . '&& NODE_ENV=development babel-node ./___resolve.js'
     let s:out = system(s:babel_command)
     exec ":edit " . s:out
     " Clean up
