@@ -122,3 +122,6 @@ source ~/vim/vimrc/plugins/repl.vim
 " Inline evaluation
 Plug 'metakirby5/codi.vim'
 
+" More powerful word motions
+Plug 'chaoren/vim-wordmotion'
+let g:wordmotion_prefix = '<Leader>'
