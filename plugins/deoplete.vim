@@ -11,15 +11,17 @@ Plug 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 Plug 'carlitux/deoplete-ternjs'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
-nnoremap <F4> :TernDef<CR>
+"Plug 'wokalski/autocomplete-flow'
+" For func argument completion
+"Plug 'Shougo/neosnippet'
+"Plug 'Shougo/neosnippet-snippets'
 
-"Typescript Plugins
+" typescript Plugins
 " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " Plug 'Quramy/tsuquyomi'
 " Plug 'mhartington/deoplete-typescript'
 
-call plug#end()
-
+" deoplete configs
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_ignore_case = 1
 let g:deoplete#enable_smart_case = 1
@@ -28,8 +30,12 @@ let g:deoplete#enable_camel_case = 1
 " let g:deoplete#max_abbr_width = 0
 " let g:deoplete#max_menu_width = 0
 let g:deoplete#omni#input_patterns = get(g:,'deoplete#omni#input_patterns',{})
-call deoplete#custom#set('_', 'matchers', ['matcher_full_fuzzy'])
+" call deoplete#custom#set('_', 'matchers', ['matcher_full_fuzzy'])
 
+" neosnippet configs
+"let g:neosnippet#enable_completed_snippet = 1
+
+" tern configs
 " let g:tern_request_timeout = 1
 let g:tern_request_timeout = 6000
 let g:tern#command = ["tern"]
