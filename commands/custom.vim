@@ -268,7 +268,18 @@ function FindSymbolInProject()
   exec 'normal "ryiw'
   exec "GitGrep -w '" . @r . "' -- :/"
 endfunction
+function FindComponentUsageInProject()
+  exec 'normal "ryiw'
+  exec "GitGrep -w '<" . @r . "' -- :/"
+endfunction
+function FindReducerInProject()
+  exec 'normal "ryiw'
+  exec "GitGrep -w '\\[" . @r . "\\]' -- :/"
+endfunction
 nnoremap <Leader>fs :call FindSymbolInProject()<CR>
+nnoremap <Leader>fc :call FindComponentUsageInProject()<CR><CR>:only<CR>
+nnoremap <Leader>fr :call FindReducerInProject()<CR><CR>:only<CR>
+nnoremap <f8> gg/class<CR>w
 nnoremap <f1> :GitGrep 
 nnoremap <f2> :GitGrep -w 
 
