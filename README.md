@@ -14,7 +14,7 @@ Install NeoVim, then fire it up and run `:PlugInstall`. If you'll access this ma
 First install a patched font from nerd-fonts so that your font looks great and you have the proper glyphs for the icons. If you're on macOS, run:
 
 ```bash
-cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20for%20Powerline%20Nerd%20Font%20Complete.otf
+cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
 ```
 
 And then set DroidSansMono as the font for your iTerm profile.
