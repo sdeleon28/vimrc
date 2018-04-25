@@ -99,7 +99,7 @@ let g:airline_powerline_fonts = 1
 source ~/vim/vimrc/plugins/coverage.vim
 
 " Snippets
-source ~/vim/vimrc/plugins/ultisnips.vim
+" source ~/vim/vimrc/plugins/ultisnips.vim
 
 " REST client
 source ~/vim/vimrc/plugins/vrc.vim
