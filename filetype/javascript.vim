@@ -28,8 +28,8 @@ augroup filetype_javascript
   autocmd FileType javascript let &formatprg = s:prettier_cmd
   autocmd FileType javascript nnoremap <Leader>p gggqG<C-O><C-O>
   " autocmd FileType javascript nnoremap <Leader>f Vi}zf
-  autocmd FileType javascript nnoremap <Leader>t Vitzf
-  autocmd FileType javascript let g:vim_tags_project_tags_command = s:ctags_cmd
+  " autocmd FileType javascript nnoremap <Leader>t Vitzf
+  " autocmd FileType javascript let g:vim_tags_project_tags_command = s:ctags_cmd
   " autocmd FileType javascript nnoremap <leader>jt A<bs>: pt.func.isRequired,<esc>j^
   " autocmd FileType javascript nnoremap <leader>jp A<bs>={<c-p>}<esc>j^
   " autocmd FileType javascript nnoremap <leader>jo A<c-w><c-w><c-w>,<esc>j^

@@ -281,10 +281,18 @@ function FindReducerInProject()
   exec "GitGrep -w '\\[" . @r . "\\]' -- :/"
 endfunction
 nnoremap <Leader>fs :call FindSymbolInProject()<CR>
-nnoremap <Leader>fu :call FindComponentUsageInProject()<CR><CR>:only<CR>
-nnoremap <Leader>fd :call FindDefinitionInProject()<CR><CR>:only<CR>
-nnoremap <Leader>fr :call FindReducerInProject()<CR><CR>:only<CR>
+nnoremap <Leader>fu :call FindComponentUsageInProject()<CR><CR>:cclose<CR>
+nnoremap <Leader>fd :call FindDefinitionInProject()<CR><CR>:cclose<CR>
+nnoremap <Leader>fr :call FindReducerInProject()<CR><CR>:cclose<CR>
 nnoremap <f8> gg/class<CR>w
+nnoremap <Leader>tp gg/type Props<CR>w
+nnoremap <Leader>ts gg/type State<CR>w
+nnoremap <Leader>mc gg/constructor(<CR>w
+nnoremap <Leader>mr gg/render(<CR>w
+nnoremap <Leader>mwm gg/componentWillMount(<CR>w
+nnoremap <Leader>mdm gg/componentDidMount(<CR>w
+nnoremap <Leader>mwu gg/componentWillUnmount(<CR>w
+nnoremap <Leader>mwp gg/componentWillReceiveProps(<CR>w
 nnoremap <f1> :GitGrep 
 nnoremap <f2> :GitGrep -w 
 
