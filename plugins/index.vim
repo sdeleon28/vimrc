@@ -125,3 +125,10 @@ Plug 'metakirby5/codi.vim'
 " More powerful word motions
 Plug 'chaoren/vim-wordmotion'
 let g:wordmotion_prefix = '<Leader>'
+
+" Bookmarking superpowers
+Plug 'sdeleon28/vim-bookmarks'
+" let g:bookmark_disable_ctrlp = 1
+" let g:bookmark_auto_save = 1
+" let g:bookmark_manage_per_buffer = 0
+
