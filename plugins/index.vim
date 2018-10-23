@@ -1,5 +1,5 @@
 " NERDTree sidebar
-source ~/vim/vimrc/plugins/nerdtree.vim
+" source ~/vim/vimrc/plugins/nerdtree.vim
 
 " Project-wide search and replace features
 Plug 'mileszs/ack.vim'
@@ -91,9 +91,9 @@ source ~/vim/vimrc/plugins/htmlencode.vim
 source ~/vim/vimrc/plugins/markdown.vim
 
 " Adds nice icons to NERDTree
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
-let g:airline_powerline_fonts = 1
+" let g:airline_powerline_fonts = 1
 
 " Code coverage support
 source ~/vim/vimrc/plugins/coverage.vim
@@ -127,8 +127,16 @@ Plug 'chaoren/vim-wordmotion'
 let g:wordmotion_prefix = '<Leader>'
 
 " Bookmarking superpowers
-Plug 'sdeleon28/vim-bookmarks'
+" Plug 'sdeleon28/vim-bookmarks'
 " let g:bookmark_disable_ctrlp = 1
 " let g:bookmark_auto_save = 1
 " let g:bookmark_manage_per_buffer = 0
 
+" Spotify lyrics
+Plug 'sdeleon28/vim-lyrics-spotify'
+
+" Cheatsheets
+Plug 'dbeniamine/cheat.sh-vim'
+
+" Flow
+source ~/vim/vimrc/plugins/flow.vim
