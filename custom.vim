@@ -52,3 +52,6 @@ set splitright
 
 " Set up the dictionary to enable <c-x><c-k> completions
 set dictionary=/usr/share/dict/words
+
+" Run current file with babel-node
+nnoremap <leader>/ :!babel-node %<CR>
