@@ -218,12 +218,12 @@ function FollowJsReference()
     let s:create_command = 'tee ' . s:root_dir . '/___resolve.js'
     call system(s:create_command, s:script_content)
     " Run babel-node from the root dir
-    let s:babel_command = 'cd  ' . s:root_dir . '&& NODE_ENV=development babel-node ./___resolve.js'
+    let s:babel_command = 'cd  ' . s:root_dir . '&& NODE_ENV=development babel ./___resolve.js | node'
     let s:out = system(s:babel_command)
     exec ":edit " . s:out
     " Clean up
     let s:delete_command = 'rm ' . s:root_dir . '/___resolve.js'
-    call system(s:delete_command)
+    " call system(s:delete_command)
   endif
 endfunction
 nnoremap <Leader>gj :call FollowJsReference()<CR>
@@ -256,11 +256,11 @@ augroup filetype_gitlog
 augroup END
 
 " fbsimctl helper mappings
-nnoremap <Leader>ilb :new<CR>:r!fbsimctl list \| grep Booted<CR>ggdd
-nnoremap <Leader>ils :new<CR>:r!fbsimctl list \| grep Shutdown<CR>ggdd
-nnoremap <Leader>ill :new<CR>:r!fbsimctl list<CR>ggdd
-nnoremap <Leader>ib ^"fyiW:!fbsimctl <C-r>f boot &<CR>
-nnoremap <Leader>is ^"fyiW:!fbsimctl <C-r>f shutdown &<CR>
+nnoremap <Leader>ilb :r!fbsimctl list \| grep Booted<CR>ggdd
+nnoremap <Leader>ils :r!fbsimctl list \| grep Shutdown<CR>ggdd
+nnoremap <Leader>ill :r!fbsimctl list<CR>ggdd
+nnoremap <Leader>ib ^"fyiW:!fbsimctl <C-r>f boot<CR>
+nnoremap <Leader>is ^"fyiW:!fbsimctl <C-r>f shutdown<CR>
 nnoremap <Leader>if :!rm ~/Library/Preferences/com.apple.iphonesimulator.plist<CR>
 
 " Faster searching
@@ -340,3 +340,68 @@ nnoremap <Leader>map :call GoToMapping()<CR>
 " Custom unimpaired-like mappings
 nnoremap <silent> ]d :on<CR>:next<CR>:Gdiff HEAD<CR>
 nnoremap <silent> [d :on<CR>:prev<CR>:Gdiff HEAD<CR>
+
+nnoremap <silent> <F9> :!adb shell input keyevent 82 && adb shell input keyevent 19 && adb shell input keyevent 23<CR><CR>
+
+func! s:strfind(s,find,start)
+  if type(a:find)==1
+    let l:i = a:start
+    while l:i<len(a:s)
+      if strpart(a:s,l:i,len(a:find))==a:find
+        return l:i
+      endif
+      let l:i+=1
+    endwhile
+    return -1
+  elseif type(a:find)==3
+    " a:find is a list
+    let l:i = a:start
+    while l:i<len(a:s)
+      let l:j=0
+      while l:j<len(a:find)
+        if strpart(a:s,l:i,len(a:find[l:j]))==a:find[l:j]
+          return [l:i,l:j]
+        endif
+        let l:j+=1
+      endwhile
+      let l:i+=1
+    endwhile
+    return [-1,-1]
+  endif
+endfunc
+
+func! s:strreplace(s,find,replace)
+  if len(a:find)==0
+    return a:s
+  endif
+  if type(a:find)==1 && type(a:replace)==1
+    let l:ret = a:s
+    let l:i = s:strfind(l:ret,a:find,0)
+    while l:i!=-1
+      let l:ret = strpart(l:ret,0,l:i).a:replace.strpart(l:ret,l:i+len(a:find))
+      let l:i = s:strfind(l:ret,a:find,l:i+len(a:replace))
+    endwhile
+    return l:ret
+  elseif  type(a:find)==3 && type(a:replace)==3 && len(a:find)==len(a:replace)
+    let l:ret = a:s
+    let [l:i,l:j] = s:strfind(l:ret,a:find,0)
+    while l:i!=-1
+      let l:ret = strpart(l:ret,0,l:i).a:replace[l:j].strpart(l:ret,l:i+len(a:find[l:j]))
+      let [l:i,l:j] = s:strfind(l:ret,a:find,l:i+len(a:replace[l:j]))
+    endwhile
+    return l:ret
+  endif
+endfunc
+
+func! s:copyrelpath()
+  let l:current_path = expand('%:p')
+  let l:gitroot = system('git rev-parse --show-toplevel')[:-2] . '/'
+  let l:newpath = s:strreplace(l:current_path, l:gitroot, '')
+  let l:copy_command = 'echo ' . l:newpath . ' | pbcopy'
+  call system(l:copy_command)
+endfunc
+
+nnoremap <F12> :echo <SID>copyrelpath()<CR>
+
+" Run node script in current file
+nnoremap <F4> :!node %<CR>
