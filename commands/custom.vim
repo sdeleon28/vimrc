@@ -223,7 +223,7 @@ function FollowJsReference()
     exec ":edit " . s:out
     " Clean up
     let s:delete_command = 'rm ' . s:root_dir . '/___resolve.js'
-    " call system(s:delete_command)
+    call system(s:delete_command)
   endif
 endfunction
 nnoremap <Leader>gj :call FollowJsReference()<CR>
