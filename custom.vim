@@ -55,3 +55,5 @@ set dictionary=/usr/share/dict/words
 
 " Run current file with babel-node
 nnoremap <leader>/ :!babel-node %<CR>
+
+nnoremap <leader>d :GitGrep -w 'debugger;' -- :/<cr>
