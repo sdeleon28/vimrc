@@ -1,4 +1,4 @@
-augroup filetype_javascript
+augroup filetype_java
   autocmd!
-  autocmd FileType java ALEDisable
+  autocmd FileType java exe "ALEDisableBuffer"
 augroup END

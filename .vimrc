@@ -8,6 +8,7 @@ source ~/vim/vimrc/filetype/java.vim
 source ~/vim/vimrc/filetype/markdown.vim
 source ~/vim/vimrc/commands/index.vim
 source ~/vim/vimrc/filetype/javascript.vim
+source ~/vim/vimrc/filetype/java.vim
 source ~/vim/vimrc/overrides/index.vim
 language en_US
 
