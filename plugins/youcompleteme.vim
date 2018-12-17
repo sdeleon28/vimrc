@@ -19,6 +19,6 @@ set splitbelow
 " ====================================================================
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
-nnoremap <F4> :TernDef<CR>
+" Plug 'ternjs/tern_for_vim', { 'do': 'npm install && npm install -g tern' }
+" nnoremap <F4> :TernDef<CR>
 
