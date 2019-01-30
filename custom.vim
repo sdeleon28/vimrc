@@ -12,7 +12,16 @@ set backupdir=~/tmp
 
 " Automatically change dir when switching files.
 " This enables :compl-filename to give me proper relative filenames.
-autocmd BufEnter * silent! lcd %:p:h
+" autocmd BufEnter * silent! lcd %:p:h
+"
+nnoremap <F5> :let @* = expand("%:t")<cr>
+nnoremap <F6> :let @* = expand("%")<cr>
+nnoremap <F7> :let @* = expand("%:p")<cr>
+function ExploreCurrentFolder()
+  exec ":edit " . expand("%:h")
+endfunction
+nnoremap <leader>x :call ExploreCurrentFolder()<cr>
+
 
 " Use 2 spaces for indentation
 set ts=2
