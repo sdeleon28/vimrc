@@ -237,8 +237,8 @@ function FollowJsReference()
   let s:filename = @r
   if s:filename[0] == '.'
     " Treat it as a relative reference
-    let s:file_with_js = s:filename . ".js"
-    let s:file_with_index_js = s:filename . "/index.js"
+    let s:file_with_js = expand('%:p:h') . s:filename[1:] . ".js"
+    let s:file_with_index_js = expand('%:p:h') . s:filename[1:] . "/index.js"
     if filereadable(s:file_with_js)
       exec ":edit " . s:file_with_js
     elseif filereadable(s:file_with_index_js)
