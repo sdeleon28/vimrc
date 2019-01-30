@@ -20,7 +20,7 @@ nnoremap <F7> :let @* = expand("%")<cr>
 function ExploreCurrentFolder()
   exec ":edit " . expand("%:h")
 endfunction
-nnoremap <leader>x :call ExploreCurrentFolder()<cr>
+nnoremap <leader>z :call ExploreCurrentFolder()<cr>
 
 
 " Use 2 spaces for indentation
