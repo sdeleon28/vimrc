@@ -301,9 +301,6 @@ nnoremap <Leader>gj :call FollowJsReference()<CR>
 
 nnoremap <Leader>json :%!python -m json.tool<CR>
 
-nnoremap <F7> :set conceallevel=0<CR>
-nnoremap <F8> :set conceallevel=1<CR>
-
 nnoremap <F12> :Gdiff HEAD<CR>
 
 " Git log helper mappings
